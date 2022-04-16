@@ -286,7 +286,7 @@ namespace ACE.Server.WorldObjects
             if (creatureSkill.AdvancementClass != SkillAdvancementClass.Specialized)
                 return 0;
 
-            var divisor = skill == Skill.MeleeDefense ? 60 : 50;
+            var divisor = skill == Skill.MeleeDefense ? 6 : 5; //var divisor = skill == Skill.MeleeDefense ? 60 : 50;
 
             // floor?
             return (int)creatureSkill.Base / divisor;
