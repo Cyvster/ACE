@@ -55,10 +55,10 @@ namespace ACE.Server.Factories.Tables
 
         private static ChanceTable<int> T7_T8_NumCantrips = new ChanceTable<int>()
         {
-            ( 1, 0.05f ),
-            ( 2, 0.05f ),
-            ( 3, 0.10f ),
-            ( 4, 0.75f ),
+            ( 4, 0.05f ),
+            ( 6, 0.05f ),
+            ( 8, 0.10f ),
+            ( 10, 0.75f ),
         };
 
         private static readonly List<ChanceTable<int>> numCantrips = new List<ChanceTable<int>>()
