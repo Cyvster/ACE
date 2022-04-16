@@ -8,7 +8,7 @@ namespace ACE.Server.WorldObjects
     public class SkillFormula
     {
         // everything else: melee weapons (including finesse), thrown weapons, atlatls
-        public static readonly float DefaultMod = 1.1f;
+        public static readonly float DefaultMod = 0.110f;
 
         // bows and crossbows
         public static readonly float BowMod = 0.008f;
