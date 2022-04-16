@@ -401,7 +401,7 @@ namespace ACE.Server.Managers
             {
                 // armor tinkering
                 case 0x38000011:    // Steel
-                    target.ArmorLevel += 20;
+                    target.ArmorLevel += 80;
                     break;
 
                  // mutations apparently didn't cap to 2.0 here, clamps are applied in damage calculations though
@@ -573,7 +573,7 @@ namespace ACE.Server.Managers
                 // weapon tinkering
 
                 case 0x3800001A:    // Iron
-                    target.Damage += 1;
+                    target.Damage += 10;
                     break;
                 case 0x3800001B:    // Mahogany
                     target.DamageMod += 0.04f;
@@ -585,7 +585,7 @@ namespace ACE.Server.Managers
                     target.WeaponTime = Math.Max(0, (target.WeaponTime ?? 0) - 50);
                     break;
                 case 0x38000020:    // Brass
-                    target.WeaponDefense += 0.01f;
+                    target.WeaponDefense += 0.04f;
                     break;
                 case 0x38000021:    // Velvet
                     target.WeaponOffense += 0.01f;
