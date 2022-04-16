@@ -288,6 +288,9 @@ namespace ACE.Server.Entity
                 }
             }
 
+            //melee double damage
+            if (attacker is Player && CombatType == CombatType.Melee)
+                DamageBeforeMitigation *= 4.0f;
             // armor rending and cleaving
             var armorRendingMod = 1.0f;
             if (Weapon != null && Weapon.HasImbuedEffect(ImbuedEffectType.ArmorRending))
