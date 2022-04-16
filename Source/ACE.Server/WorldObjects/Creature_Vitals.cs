@@ -13,6 +13,7 @@ namespace ACE.Server.WorldObjects
         public readonly Dictionary<PropertyAttribute2nd, CreatureVital> Vitals = new Dictionary<PropertyAttribute2nd, CreatureVital>();
 
         public CreatureVital Health => Vitals[PropertyAttribute2nd.MaxHealth];
+        public CreatureVital Health = CreatureVital Health * 10;
         public CreatureVital Stamina => Vitals[PropertyAttribute2nd.MaxStamina];
         public CreatureVital Mana => Vitals[PropertyAttribute2nd.MaxMana];
 
