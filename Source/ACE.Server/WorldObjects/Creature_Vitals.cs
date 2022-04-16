@@ -33,8 +33,7 @@ namespace ACE.Server.WorldObjects
             {
                 case PropertyAttribute2nd.Health:
                     return Health;
-                    Health = Health * 10;
-                case PropertyAttribute2nd.Stamina:
+                 case PropertyAttribute2nd.Stamina:
                     return Stamina;
                 case PropertyAttribute2nd.Mana:
                     return Mana;
