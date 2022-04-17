@@ -1,6 +1,6 @@
 0x38000025 Mutation #1:
 
-Tier chances: 1
+Tier chances: 4
 
     - Chance: 100%:
         ImbuedEffect = ArmorRending
