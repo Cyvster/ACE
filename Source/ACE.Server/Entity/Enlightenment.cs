@@ -86,7 +86,7 @@ namespace ACE.Server.Entity
                 return false;
             }
 
-            if (player.Enlightenment >= 5)
+            if (player.Enlightenment >= 1000)
             {
                 player.Session.Network.EnqueueSend(new GameMessageSystemChat($"You have already reached the maximum enlightenment level!", ChatMessageType.Broadcast));
                 return false;
@@ -304,7 +304,7 @@ namespace ACE.Server.Entity
             //var enlightenment = player.Enlightenment + 1;
             //player.UpdateProperty(player, PropertyInt.Enlightenment, enlightenment);
 
-            player.Enlightenment += 1;
+            player.Enlightenment += 10;
             player.Session.Network.EnqueueSend(new GameMessagePrivateUpdatePropertyInt(player, PropertyInt.Enlightenment, player.Enlightenment));
 
             player.SendMessage("You have become enlightened and view the world with new eyes.", ChatMessageType.Broadcast);
