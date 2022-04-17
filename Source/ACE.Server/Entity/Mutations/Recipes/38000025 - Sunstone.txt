@@ -1,0 +1,9 @@
+0x38000025 Mutation #1:
+
+Tier chances: 1
+
+    - Chance: 100%:
+        ImbuedEffect = ArmorRending
+        ImbuedEffect = CripplingBlow
+        ImbuedEffect = CriticalStrike
+        NumTimesTinkered (>= 1 ? add : set) 1
