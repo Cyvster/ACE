@@ -67,8 +67,8 @@ namespace ACE.Server.Network.Structure
                 var player = PlayerManager.FindByGuid(playerGuid, out var playerIsOnline);
                 
                 characterID = player.Guid.Full;
-                cpCached = (uint)Math.Min(player.AllegianceXPCached, uint.MaxValue);
-                cpTithed = (uint)Math.Min(player.AllegianceXPGenerated, uint.MaxValue);
+                cpCached = uint.player.AllegianceXPCached;
+                cpTithed = uint.player.AllegianceXPGenerated;
 
                 if (playerIsOnline)
                     bitfield |= AllegianceIndex.LoggedIn;
