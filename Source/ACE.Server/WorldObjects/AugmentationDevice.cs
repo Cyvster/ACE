@@ -85,7 +85,7 @@ namespace ACE.Server.WorldObjects
 
                 var attr = AugTypeHelper.GetAttribute(type);
                 var playerAttr = player.Attributes[attr];
-                playerAttr.StartingValue += 5;
+                playerAttr.StartingValue += 90;
                 player.Session.Network.EnqueueSend(new GameMessagePrivateUpdateAttribute(player, playerAttr));
             }
             else if (AugTypeHelper.IsResist(type))
@@ -209,12 +209,12 @@ namespace ACE.Server.WorldObjects
 
         public static Dictionary<AugmentationType, int> MaxAugs = new Dictionary<AugmentationType, int>()
         {
-            { AugmentationType.Strength, 54 },          // attributes in shared group
-            { AugmentationType.Endurance, 54 },
-            { AugmentationType.Coordination, 54 },
-            { AugmentationType.Quickness, 54 },
-            { AugmentationType.Focus, 54 },
-            { AugmentationType.Self, 54 },
+            { AugmentationType.Strength, 6 },          // attributes in shared group
+            { AugmentationType.Endurance, 6 },
+            { AugmentationType.Coordination, 6 },
+            { AugmentationType.Quickness, 6 },
+            { AugmentationType.Focus, 6 },
+            { AugmentationType.Self, 6 },
             { AugmentationType.Salvage, 1 },
             { AugmentationType.ItemTinkering, 1 },
             { AugmentationType.ArmorTinkering, 1 },
