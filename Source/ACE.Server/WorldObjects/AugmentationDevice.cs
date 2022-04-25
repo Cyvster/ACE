@@ -209,12 +209,12 @@ namespace ACE.Server.WorldObjects
 
         public static Dictionary<AugmentationType, int> MaxAugs = new Dictionary<AugmentationType, int>()
         {
-            { AugmentationType.Strength, 10 },          // attributes in shared group
-            { AugmentationType.Endurance, 10 },
-            { AugmentationType.Coordination, 10 },
-            { AugmentationType.Quickness, 10 },
-            { AugmentationType.Focus, 10 },
-            { AugmentationType.Self, 10 },
+            { AugmentationType.Strength, 54 },          // attributes in shared group
+            { AugmentationType.Endurance, 54 },
+            { AugmentationType.Coordination, 54 },
+            { AugmentationType.Quickness, 54 },
+            { AugmentationType.Focus, 54 },
+            { AugmentationType.Self, 54 },
             { AugmentationType.Salvage, 1 },
             { AugmentationType.ItemTinkering, 1 },
             { AugmentationType.ArmorTinkering, 1 },
