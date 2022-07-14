@@ -44,7 +44,7 @@ namespace ACE.Server.WorldObjects
         /// <summary>
         /// Returns TRUE if this weapon cleaves
         /// </summary>
-        public bool IsCleaving { get => GetProperty(PropertyInt.Cleaving) != null;  }
+        public bool IsCleaving { get => GetProperty(PropertyInt.Cleaving) != null || this is MeleeWeapon;  }
 
         /// <summary>
         /// Returns the number of cleave targets for this weapon
