@@ -55,9 +55,9 @@ namespace ACE.Server.WorldObjects
             get
             {
                 if (!IsCleaving)
-                    return 4;
+                    return 0;
 
-                return GetProperty(PropertyInt.Cleaving).Value - 1;
+                return Math.Min(1, (GetProperty(PropertyInt.Cleaving).GetValueOrDefault() - 1));
             }
         }
 
