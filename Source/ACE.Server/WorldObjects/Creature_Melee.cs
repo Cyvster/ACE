@@ -116,7 +116,7 @@ namespace ACE.Server.WorldObjects
             if (!weapon.IsCleaving) return null;
             
             //Custom Code to add cleave chance to melee **Beginning**
-            /*
+            
             var minChance = .001;
             var maxChance = 1.0;
             var skillCap = 3200.0;
@@ -124,7 +124,7 @@ namespace ACE.Server.WorldObjects
             var cleaveChance = Math.Clamp(minChance + (maxChance - minChance) * (skill / skillCap), minChance, maxChance);
             if (cleaveChance < ACE.Common.ThreadSafeRandom.Next(0.0f, 1.0f))
                 return new List<Creature>();    // make sure it's a blank list instead of null
-            */
+            
             //Custom Code to add cleave chance to melee **End**
 
             // sort visible objects by ascending distance
