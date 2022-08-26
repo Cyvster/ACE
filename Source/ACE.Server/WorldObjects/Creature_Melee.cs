@@ -115,13 +115,16 @@ namespace ACE.Server.WorldObjects
             var player = this as Player;
             if (!weapon.IsCleaving) return null;
             
-            var minChance = .001;
+            //Custom Code to add cleave chance to melee **Beginning**
+            /*var minChance = .001;
             var maxChance = .5;
             var skillCap = 3200.0;
             var skill = GetCreatureSkill(weapon.WeaponSkill).Current; // or .Current or .Base if you want the buffed skill.  Might need a null check on WeaponSkill?
             var cleaveChance = Math.Clamp(minChance + (maxChance - minChance) * (skill / skillCap), minChance, maxChance);
             if (cleaveChance < ACE.Common.ThreadSafeRandom.Next(0.0f, 1.0f))
-                return new List<Creature>();    // make sure it's a blank list instead of null
+                return new List<Creature>();    // make sure it's a blank list instead of null*/
+            
+            //Custom Code to add cleave chance to melee **End**
 
             // sort visible objects by ascending distance
             var visible = PhysicsObj.ObjMaint.GetVisibleObjectsValuesWhere(o => o.WeenieObj.WorldObject != null);
