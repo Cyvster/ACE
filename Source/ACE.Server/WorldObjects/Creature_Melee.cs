@@ -117,7 +117,7 @@ namespace ACE.Server.WorldObjects
             
             var minChance = .001;
             var maxChance = 1.0;
-            var skillCap = 32000.0;
+            var skillCap = 3200.0;
             var skill = GetCreatureSkill(weapon.WeaponSkill).Current; // or .Current or .Base if you want the buffed skill.  Might need a null check on WeaponSkill?
             var cleaveChance = Math.Clamp(minChance + (maxChance - minChance) * (skill / skillCap), minChance, maxChance);
             if (cleaveChance > ACE.Common.ThreadSafeRandom.Next(0.0f, 1.0f))
