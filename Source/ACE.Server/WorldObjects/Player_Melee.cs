@@ -163,7 +163,7 @@ namespace ACE.Server.WorldObjects
                 HandleActionTargetedMeleeAttack_Inner(target, attackSequence);
         }
 
-        public static readonly float MeleeDistance  = 0.6f;
+        public static readonly float MeleeDistance  = 4.0f;
         public static readonly float StickyDistance = 4.0f;
         public static readonly float RepeatDistance = 16.0f;
 
