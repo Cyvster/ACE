@@ -110,7 +110,7 @@ namespace ACE.Server.WorldObjects.Entity
                 var total = StartingValue + Ranks + attr;
 
                 if (creature is Player player && Vital == PropertyAttribute2nd.MaxHealth)
-                    total += (uint)(player.Enlightenment * 2 + player.GetGearMaxHealth());
+                    total += (uint)(player.Enlightenment * 20 + player.GetGearMaxHealth());
 
                 return total;
             }
