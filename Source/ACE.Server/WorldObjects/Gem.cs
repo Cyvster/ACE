@@ -255,7 +255,7 @@ namespace ACE.Server.WorldObjects
         /// any other rares with RareUsesTimer may not be used for 3 minutes
         /// Note that if the player logs out, this cooldown timer continues to tick/expire (unlike enchantments)
         /// </summary>
-        public static int RareTimer = 180;
+        public static int RareTimer = 1;
 
         public string UseSendsSignal
         {
