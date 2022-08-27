@@ -183,7 +183,7 @@ namespace ACE.Server.WorldObjects.Managers
 
                 var duration = spell.Duration;
                 if (caster is Player player && player.AugmentationIncreasedSpellDuration > 0 && !spell.IsDamageOverTime)
-                    duration *= 1.0f + player.AugmentationIncreasedSpellDuration * 0.2f;
+                    duration *= 1.0f + player.AugmentationIncreasedSpellDuration * 1.0f;
 
                 var timeRemaining = refreshSpell.Duration + refreshSpell.StartTime;
 
