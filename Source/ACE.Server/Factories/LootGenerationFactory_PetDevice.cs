@@ -51,7 +51,7 @@ namespace ACE.Server.Factories
         {
             if (!(petDevice is PetDevice)) return;
 
-            var ratingChance = 0.5f;
+            var ratingChance = 0.98f;
 
             // add rng ratings to pet device
             // linear or biased?
@@ -74,12 +74,12 @@ namespace ACE.Server.Factories
         public static int GeneratePetDeviceRating(int tier)
         {
             // thanks to morosity for this formula!
-            var baseRating = ThreadSafeRandom.Next(1, 10);
+            var baseRating = ThreadSafeRandom.Next(1, 200);
 
             var chance = 0.4f + tier * 0.02f;
             var rng = ThreadSafeRandom.Next(0.0f, 1.0f);
             if (rng < chance)
-                baseRating += ThreadSafeRandom.Next(1, 10);
+                baseRating += ThreadSafeRandom.Next(1, 200);
 
             return baseRating;
         }
