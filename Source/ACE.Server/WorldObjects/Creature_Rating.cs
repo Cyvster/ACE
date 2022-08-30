@@ -306,7 +306,7 @@ namespace ACE.Server.WorldObjects
             var augBonus = 0;
 
             if (this is Player player)
-                augBonus = player.AugmentationCriticalExpertise;
+                augBonus = player.AugmentationCriticalExpertise * 10;
 
             return critChanceRating + enchantments + augBonus;
         }
