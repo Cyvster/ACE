@@ -219,7 +219,7 @@ namespace ACE.Server.WorldObjects
 
             if (this is Player player)
             {
-                augBonus = player.AugmentationDamageBonus * 3;
+                augBonus = player.AugmentationDamageBonus * 30;
                 lumAugBonus = player.LumAugDamageRating;
             }
 
@@ -248,7 +248,7 @@ namespace ACE.Server.WorldObjects
 
             if (this is Player player)
             {
-                augBonus = player.AugmentationDamageReduction * 3;
+                augBonus = player.AugmentationDamageReduction * 30;
                 lumAugBonus = player.LumAugDamageReductionRating;
                 specBonus = GetSpecDefenseBonus(combatType);
             }
@@ -328,7 +328,7 @@ namespace ACE.Server.WorldObjects
 
             if (this is Player player)
             {
-                augBonus = player.AugmentationCriticalPower * 3;
+                augBonus = player.AugmentationCriticalPower * 30;
                 lumAugBonus = player.LumAugCritDamageRating;
             }
 
