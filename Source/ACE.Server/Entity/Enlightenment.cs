@@ -115,7 +115,7 @@ namespace ACE.Server.Entity
             lumAugCredits += player.LumAugSkilledCraft;
             lumAugCredits += player.LumAugSkilledSpec;
 
-            return lumAugCredits == 65;
+            return lumAugCredits >= 65;
         }
 
         public static void DequipAllItems(Player player)
