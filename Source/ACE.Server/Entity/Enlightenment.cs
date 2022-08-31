@@ -243,10 +243,14 @@ namespace ACE.Server.Entity
 
             availableSkillCredits += (int)heritageGroup.SkillCredits; // base skill credits allowed
 
-            availableSkillCredits += player.QuestManager.GetCurrentSolves("ArantahKill1");       // additional quest skill credit
-            availableSkillCredits += player.QuestManager.GetCurrentSolves("OswaldManualCompleted");  // additional quest skill credit
-            availableSkillCredits += player.QuestManager.GetCurrentSolves("LumAugSkillQuest");   // additional quest skill credits
+            skillCreditQuests = 0;
 
+            skillCreditQuests += player.QuestManager.GetCurrentSolves("ArantahKill1");       // additional quest skill credit
+            skillCreditQuests += player.QuestManager.GetCurrentSolves("OswaldManualCompleted");  // additional quest skill credit
+            skillCreditQuests += player.QuestManager.GetCurrentSolves("LumAugSkillQuest");   // additional quest skill credits
+            
+            availableSkillCredits += skillCreditQuests * 100;
+            
             player.AvailableSkillCredits = availableSkillCredits;
 
             player.Session.Network.EnqueueSend(new GameMessagePrivateUpdatePropertyInt(player, PropertyInt.AvailableSkillCredits, player.AvailableSkillCredits ?? 0));
