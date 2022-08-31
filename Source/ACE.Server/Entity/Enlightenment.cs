@@ -114,6 +114,8 @@ namespace ACE.Server.Entity
             lumAugCredits += player.LumAugHealingRating;
             lumAugCredits += player.LumAugSkilledCraft;
             lumAugCredits += player.LumAugSkilledSpec;
+            
+            player.Session.Network.EnqueueSend(new GameMessageSystemChat($"You have attained {lumAugCredits} luminance augmentation credits.", ChatMessageType.Broadcast));
 
             return lumAugCredits >= 65;
         }
