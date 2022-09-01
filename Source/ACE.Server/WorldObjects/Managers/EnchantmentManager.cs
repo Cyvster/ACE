@@ -220,7 +220,7 @@ namespace ACE.Server.WorldObjects.Managers
                 entry.Duration = spell.Duration;
 
                 if (caster is Player player && player.AugmentationIncreasedSpellDuration > 0 && !spell.IsDamageOverTime)
-                    entry.Duration *= 1.0f + player.AugmentationIncreasedSpellDuration * 0.2f;
+                    entry.Duration *= 1.0f + player.AugmentationIncreasedSpellDuration * 1.0f;
             }
             else
             {
