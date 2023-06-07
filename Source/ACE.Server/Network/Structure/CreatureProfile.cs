@@ -51,6 +51,7 @@ namespace ACE.Server.Network.Structure
 
             Health = creature.Health.Current;
             HealthMax = creature.Health.MaxValue;
+            HealthMax = HealthMax * 10;
 
             if (!success) return;
 
