@@ -19,9 +19,8 @@ namespace ACE.Server.WorldObjects
         public virtual void SetMaxVitals()
         {
             var missingHealth = Health.Missing;
-            Health.MaxValue = Health.MaxValue * 10;
-            
-            Health.Current = Health.MaxValue;
+                        
+            Health.Current = Health.MaxValue * 10;
             Stamina.Current = Stamina.MaxValue;
             Mana.Current = Mana.MaxValue;
 
