@@ -15,12 +15,14 @@ namespace ACE.Server.WorldObjects
         public CreatureVital Health => Vitals[PropertyAttribute2nd.MaxHealth];
         public CreatureVital Stamina => Vitals[PropertyAttribute2nd.MaxStamina];
         public CreatureVital Mana => Vitals[PropertyAttribute2nd.MaxMana];
+        
+        Health = Health * 10;
 
         public virtual void SetMaxVitals()
         {
             var missingHealth = Health.Missing;
                         
-            Health.Current = Health.MaxValue * 10;
+            Health.Current = Health.MaxValue;
             Stamina.Current = Stamina.MaxValue;
             Mana.Current = Mana.MaxValue;
 
