@@ -130,7 +130,7 @@ namespace ACE.Server.WorldObjects
                 GenerateInventoryTreasure();
 
                 // TODO: fix tod data
-                Health.Current = Health.MaxValue * 10;
+                Health.Current = Health.MaxValue;
                 Stamina.Current = Stamina.MaxValue;
                 Mana.Current = Mana.MaxValue;
             }
