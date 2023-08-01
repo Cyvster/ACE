@@ -95,7 +95,7 @@ namespace ACE.Server.WorldObjects
                 GenerateNewFace();
 
             // If any of the vitals don't exist for this biota, one will be created automatically in the CreatureVital ctor
-            Vitals[PropertyAttribute2nd.MaxHealth] = new CreatureVital(this, (PropertyAttribute2nd.MaxHealth * 10 ));
+            Vitals[PropertyAttribute2nd.MaxHealth] = new CreatureVital(this, (PropertyAttribute2nd.MaxHealth);
             Vitals[PropertyAttribute2nd.MaxStamina] = new CreatureVital(this, PropertyAttribute2nd.MaxStamina);
             Vitals[PropertyAttribute2nd.MaxMana] = new CreatureVital(this, PropertyAttribute2nd.MaxMana);
 
@@ -130,7 +130,7 @@ namespace ACE.Server.WorldObjects
                 GenerateInventoryTreasure();
 
                 // TODO: fix tod data
-                Health.Current = Health.MaxValue;
+                Health.Current = Health.MaxValue * 10;
                 Stamina.Current = Stamina.MaxValue;
                 Mana.Current = Mana.MaxValue;
             }
