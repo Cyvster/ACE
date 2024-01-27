@@ -112,6 +112,9 @@ namespace ACE.Server.WorldObjects.Entity
                 if (creature is Player player && Vital == PropertyAttribute2nd.MaxHealth)
                     total += (uint)(player.Enlightenment * 20 + player.GetGearMaxHealth());
 
+                if (creature is Creature player && Vital == PropertyAttribute2nd.MaxHealth)
+                    total += (uint)(10 * player.GetGearMaxHealth());
+
                 return total;
             }
         }
@@ -145,11 +148,7 @@ namespace ACE.Server.WorldObjects.Entity
                 if (Vital == PropertyAttribute2nd.MaxHealth)
                     total += (uint)(player.Enlightenment * 2 + player.GetGearMaxHealth());
             }
-            if (player = null)
-            {
-                if (Vital == PropertyAttribute2nd.MaxHealth)
-                    total += total * 10;
-            }
+
 
             // apply multiplicative enchantments first
             var multiplier = enchanted ? creature.EnchantmentManager.GetVitalMod_Multiplier(this) : 1.0f;
