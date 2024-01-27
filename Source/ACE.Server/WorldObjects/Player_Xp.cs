@@ -37,6 +37,8 @@ namespace ACE.Server.WorldObjects
                 log.Warn($"modifier: {modifier}, enchantment: {enchantment}, m_amount: {m_amount}");
                 return;
             }
+            if (xpType == XpType.Quest)
+                m_amount = m_amount * 10;
 
             GrantXP(m_amount, xpType, shareType);
         }
