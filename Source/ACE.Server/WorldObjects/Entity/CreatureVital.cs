@@ -111,9 +111,8 @@ namespace ACE.Server.WorldObjects.Entity
 
                 if (creature is Player player && Vital == PropertyAttribute2nd.MaxHealth)
                     total += (uint)(player.Enlightenment * 20 + player.GetGearMaxHealth());
-
-                if (creature != Player && Vital == PropertyAttribute2nd.MaxHealth)
-                    total += (uint)(10 * GetGearMaxHealth());
+                if (player = null && Vital == PropertyAttribute2nd.MaxHealth)
+                    total += (uint)(10 * PropertyAttribute2nd.MaxHealth());
 
                 return total;
             }
