@@ -38,7 +38,7 @@ namespace ACE.Server.WorldObjects
                 return;
             }
             if (xpType == XpType.Quest)
-                m_amount = m_amount * 10;
+                m_amount = m_amount * 2;
 
             GrantXP(m_amount, xpType, shareType);
         }
