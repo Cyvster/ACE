@@ -145,11 +145,13 @@ namespace ACE.Server.WorldObjects.Entity
                 if (Vital == PropertyAttribute2nd.MaxHealth)
                     total += (uint)(player.Enlightenment * 2 + player.GetGearMaxHealth());
             }
-            else if (creature.Attackable && creature.TargetingTactic != 0 && !(creature is CombatPet))
+
+            //GMRiggs code to increase all mob hp 10x. It doesn't work on all mobs. For instance, olthoi slashers/slayers are still normal HP but rippers are 10x.
+            /*else if (creature.Attackable && creature.TargetingTactic != 0 && !(creature is CombatPet))
             {
                 if (Vital == PropertyAttribute2nd.MaxHealth)
                     total *= 10;
-            }
+            }*/
 
             // apply multiplicative enchantments first
             var multiplier = enchanted ? creature.EnchantmentManager.GetVitalMod_Multiplier(this) : 1.0f;
